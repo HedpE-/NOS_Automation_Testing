@@ -1,0 +1,21 @@
+1.
+A minha escolha basear-se-ia no budget disponível, sendo que seria possível automatizar estes testes recorrendo a várias soluções. Descrevo algumas opções, ordenadas por custo:
+	- Projeto C# desenvolvido "in-house" juntamente com as bibliotecas NUnit e RestSharp. Escolhi C# pois é a linguagem com que me sinto mais confortável mas também poderíamos atingir os mesmos resultados com um projeto Java/Maven com as bibliotecas JUnit e rest-assured.
+	- Smartbear SoapUI. Esta aplicação é free e permite automatizar e fazer asserts a API's REST e SOAP, no entanto a versão free é um pouco limitada em termos de integração em pipelines CI/CD.
+	- Katalon Studio. Esta aplicação é uma plataforma de testes automáticos completa, free sendo que apenas se paga o contrato de suporte. É uma aplicação bastante poderosa no entanto, pela experiência que tive é bastante instável mas permite a integração com pipelines CI/CD e Docker.
+	- Smartbear TestComplete - Esta é uma aplicação paga em que a Smartbear opta por vender licenças vitalícias sendo que a partir do 2º ano é uma ferramenta potencialmente free, caso não seja contratado suporte da Smartbear. Utiliza recursos do ReadyAPI (anteriormente chamado SoapUI Pro) e é bastante poderosa na automatização de API REST e SOAP tendo total suporte na integração com pipelines de CI/CD.
+	- Tricentis Tosca - Esta é a solução mais cara e, em contrapartida, possivelmente a ferramenta com utilização mais simplificada uma vez que os testes são desenhados ao estilo de fluxogramas. É bastante poderosa e permite integração com pipelines CI/CD.
+
+2.
+Os use cases foram identificados de forma a cobrir o máximo de operações CRUD a esta API e garantir que a mesma lida adequadamente com entradas válidas (não foram incluídos use cases para entradas inválidas). Ao validar respostas e códigos de status, os testes ajudam a garantir que a API seja robusta e confiável para uso em produção.
+Seguem todos a mesma lógica de criar o request, enviar o request e interpretar a resposta sendo que nenhum teste é dependente de dados pré existentes, sempre que necessário, é criado um novo objeto, como por exemplo a criação de um novo user para utilizar o seu id na operação Get User.
+
+3.
+Ver classe de testes 'TodoApiTests'
+
+
+4.1.
+Ao implementar testes de carga, garante-se que a API é robusta, escalável e capaz de proporcionar um serviço fiável aos utilizadores, reduzindo assim o risco de tempo de inatividade e de uma experiência de utilizador deficiente durante os períodos de utilização máxima.
+
+4.2.
+Para implementar Continuous Testing, integramos testes automatizados no pipeline de desenvolvimento e deployment, utilizando ferramentas como xUnit, NUnit, RestSharp e NBomber. Utilizamos uma plataforma CI/CD como Jenkins ou GitLab CI, configurando o pipeline para executar testes unitários, de integração, funcionais e de carga em cada commit ou pull request. Automatizamos testes de regressão e performance, monitorizamos resultados com dashboards e alertas, e ajustamos o pipeline conforme necessário. Isto garante qualidade contínua, feedback rápido, eficiência, velocidade, e escalabilidade, resultando em lançamentos mais frequentes e seguros.
