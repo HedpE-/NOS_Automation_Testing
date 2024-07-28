@@ -11,6 +11,7 @@ Os use cases foram identificados de forma a cobrir o máximo de operações CRUD
 Seguem todos a mesma lógica de criar o request, enviar o request e interpretar a resposta sendo que nenhum teste é dependente de dados pré existentes, sempre que necessário, é criado um novo objeto, como por exemplo a criação de um novo user para utilizar o seu id na operação Get User.
 
 3.
+https://github.com/HedpE-/NOS_Automation_Testing
 Ver classe de testes 'TodoApiTests'
 
 
